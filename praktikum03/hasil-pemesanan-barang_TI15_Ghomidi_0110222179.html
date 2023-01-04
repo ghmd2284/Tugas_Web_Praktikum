@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghomidi Store</title>
+    <style>
+        nav ul li {
+            display: block;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            font-size: large;
+            text-decoration: none;
+            margin-right: 200px;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: lightgray;">
+    <header style="background-color: whitesmoke; margin-bottom: 40px;">
+        <nav>
+            <fieldset>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Policy</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </fieldset>
+        </nav>
+    </header>
+    <div style="display: block; float:left; margin-left: 5px; margin-right: 20px;">
+        <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/10/thicker-diagonal.png" alt="" width="300">
+    </div>
+    <div>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="title">Title Here :</label></td>
+                        <td>MacBook Air $2000</td>
+                    </tr>
+                    <tr>
+                        <td><label for="desc">Description :</label></td>
+                        <td align="top">Year : 2009 <br> Model : <br> Condition : Mint</td>
+                    </tr>
+                    <tr>
+                        <td><label for="t_amount">Total Amount : </label></td>
+                        <td>$2000</td>
+                    </tr>
+                    <tr>
+                        <td><label for="payto">Pay to : </label></td>
+                        <td>123-456-789-0</td>
+                    </tr>
+                    <tr>
+                        <td><label for="paytype">Payment Type :</label></td>
+                        <td><select name="paytype" id="paytype">
+                                <option value="VISA">Visa Debit</option>
+                                <option value="BCA">Bank BCA</option>
+                                <option value="BRI">Bank BRI</option>
+                                <option value="Mandiri">Bank Mandiri</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="acc_hold">Account Holder</label></td>
+                        <td><input type="text" name="acc_hold" id="acc_hold" placeholder="Name Here"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="acc_no">Account Label :</label></td>
+                        <td><input type="number" name="acc_no" id="acc_no" placeholder="123-456-789-0"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="sendhp" id="">Send To Mobile Phone</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="sendemail" id="">Send To Email</td>
+                    </tr>
+                    <tr>
+                        <td><label for="sendhp">Send To Mobile Phone :</label></td>
+                        <td><input type="number" name="sendhp" id="sendhp" placeholder="123456789, 123456789"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sendemail">Send To Email :</label></td>
+                        <td><input type="email" name="sendemail" id="sendmail" placeholder="jniunws893983@gmail.com"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">Pay Using QuidLink</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

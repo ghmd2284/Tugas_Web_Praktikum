@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <style>
+        form label {
+            display: flex;
+        }
+
+        form span {
+            color: red;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Form Validasi</legend>
+        <form action="">
+            <label for=" nama">Nama Pelanggan</label>
+            <input type="text" id="nama">
+            <span id="namaerror"></span>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <span id="emailerror"></span>
+            <br>
+            <label for="jam">Jam Keberangkatan</label>
+            <input type="time" id="jam">
+            <span id="jamerror"></span>
+            <br>
+            <label for="tujuan">Tujuan Keberangkatan</label>
+            <input type="text" id="tujuan">
+            <span id="tujuanerror"></span>
+            <br>
+            <label for="tiket">Jumlah Tiket</label>
+            <input type="number" id="tiket">
+            <span id="tiekterror"></span>
+            <br>
+            <hr>
+            <input type="submit" value="Validasi" id="submit">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend id="hasil"></legend>
+        <div id="hasil_nama"></div>
+        <div id="hasil_email"></div>
+        <div id="hasil_jam"></div>
+        <div id="hasil_tujuan"></div>
+        <div id="hasil_tiket"></div>
+    </fieldset>
+    <script>
+        // Isian dari form 
+        let nama = document.getElementById("nama");
+        let email = document.getElementById("email");
+        let jam = document.getElementById("jam");
+        let tujuan = document.getElementById("tujuan");
+        let tiket = document.getElementById("tiket");
+        let btnSubmit = document.getElementById("submit");
+
+        // ketentuan
+        let maxChar = 30;
+        let polaEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+        let polaJam = /^[0-9]+[0-9]+.+[0-9]$/
+        let error = "";
+
+        btnSubmit.onclick = function() {
+            // validasi nama
+            if (nama.value == "") {
+                error = "Nama pelanggan harus di isi !";
+                document.getElementById("namaerror").innerHTML = error;
+                return false;
+            } else if (nama.value.length > maxChar) {
+                error = "Maksimum 30 karakter !";
+                document.getElementById("namaerror").innerHTML = error;
+                return false;
+                // validasi email
+            } else if (email == "") {
+                error = "Email harus di isi !";
+                document.getElementById("emailerror").innerHTML = error;
+                return false;
+            } else if (!polaEmail.test(email.value)) {
+                error = "Penulisan email tidak benar !";
+                document.getElementById("emailerror").innerHTML = error;
+                return false;
+                // validasi jam    
+            } else if (jam.value == "") {
+                error = "Jam keberangkatan harus di isi !";
+                document.getElementById("jamerror").innerHTML = error;
+                return false;
+            } else if (!polaJam.test(jam.value)) {
+                error = "Format Jam tidak benar !";
+                document.getElementById("jamerror").innerHTML = error;
+                return false;
+            } else if (jam.value > 23.00) {
+                error = "Jam melebih batas normal !";
+                document.getElementById("jamerror").innerHTML = error;
+                return false;
+                // validasi tujuan    
+            } else if (tujuan == "") {
+                error = "Tujuan harus di isi !";
+                document.getElementById("tujuanerror").innerHTML = error;
+                return false;
+                // validasi ticket    
+            } else if (tiket.value == "") {
+                error = "Tiket harus di isi !";
+                document.getElementById("tiketerror").innerHTML = error;
+                return false;
+            } else if (tiket.value > 10) {
+                error = "Tiket melebihi batas normal !";
+                document.getElementById("tiketerror").innerHTML = error;
+                return false;
+            } else {
+                document.getElementById("hasil").innerHTML = "Data";
+                document.getElementById("hasil_nama").innerHTML = "\tNama\t\t\t\t\t : " + nama.value;
+                document.getElementById("hasil_email").innerHTML = "\tEmail\t\t\t\t\t : " + email.value;
+                document.getElementById("hasil_jam").innerHTML = "\tJam Keberangkatan  : " + jam.value;
+                document.getElementById("hasil_tujuan").innerHTML = "Tujuan Keberangkatan : " + tujuan.value;
+                document.getElementById("hasil_tiket").innerHTML = "Jumlah Tiket : " + tiket.value;
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

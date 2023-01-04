@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Baris 1  */
+.container .kotak:nth-child(1) {
+    background-color: yellow;
+    width: 20%;
+}
+
+.container .kotak:nth-child(2) {
+    background-color: orange;
+    width: 79%;
+}
+
+.kotak {
+    height: 100px;
+}
+
+/* Baris 2 */
+
+.container .isi:nth-child(1) {
+    background-color: greenyellow;
+    width: 20%;
+}
+
+.container .isi:nth-child(2) {
+    background-color: grey;
+    width: 58%;
+}
+
+.container .isi:nth-child(3) {
+    background-color: aqua;
+    width: 20%;
+}
+
+.isi {
+    height: 400px;
+}
+
+/* Baris 3 */
+.kotak-bawah {
+    background-color: blue;
+    margin-top: 20px;
+}

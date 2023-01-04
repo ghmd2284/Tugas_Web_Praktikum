@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header align="center">
+        <fieldset>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home |</a>
+                    </li>
+                    <li>
+                        <a href="#">Generate Link |</a>
+                    </li>
+                    <li>
+                        <a href="#">Transaction History |</a>
+                    </li>
+                    <li>
+                        <button type="button">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+        </fieldset>
+    </header>
+    <br>
+    <form action="/hasil-pemesanan-barang.html" align="cennter">
+        <section>
+            <img src="" alt="">
+            <div>
+                <button>
+                    Upload Picture
+                </button>
+            </div>
+        </section>
+        <section>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="title">Title Here :</label></td>
+                        <td><input type="text" name="title" id="title" placeholder="Title Here"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="desc">Description :</label></td>
+                        <td><textarea name="des" id="desc" cols="30" rows="7" placeholder="Description"></textarea></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="acc_num">Account Number :</label></td>
+                        <td><input type="number" name="acc_num" id="acc_num" placeholder="Account Number"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td><label for="bank">Bank :</label></td>
+                        <td><select name="bank" id="bank">
+                                <option value="BNI">Bank BNI</option>
+                                <option value="BCA">Bank BCA</option>
+                                <option value="BRI">Bank BRI</option>
+                                <option value="Mandiri">Bank Mandiri</option>
+                                <option value="HSBC" selected>HSBC</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="acc_hold">Account Holder :</label></td>
+                        <td><input type="text" name="acc_hold" id="acc_hold" placeholder="Account Holder"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Transaction">Transaction :</label></td>
+                        <td><select name="Transaction" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td></td>
+                        <td><label for="">*if the transaction is for 3 person,choose 3 from the drop-down list</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="sendhp" id="">Send To Mobile Phone </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="checkbox" name="sendemail" id="">Send To Email </td>
+                    </tr>
+                    <tr>
+                        <td><label for="sendhp">Send To Mobile Phone :</label></td>
+                        <td><input type="number" name="sendhp" id=""></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sendemail">Send To Email :</label></td>
+                        <td><input type="email" name="sendemail" id=""></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Generate Nabr Link"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: aqua;
+    height: 30px;
+    margin: 10px 20px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    height: 300px;
+}
+
+main aside {
+    background-color: aquamarine;
+    margin: 10px 20px;
+    flex-grow: 1;
+}
+
+main article {
+    background-color: palevioletred;
+    flex-grow: 1;
+    margin: 10px 20px;
+}
+
+main p {
+    text-align: center;
+    
+}
+
+.gambar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main article img {
+    width: 100px;
+}
